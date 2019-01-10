@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+    <div id="container">
+        <div id="panel_left">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/logo.png" alt="">
+                </a>
+            </div>
+
+            <div id="responsive_menu">
+            <p id="openMenu" onclick="slide();">Menu</p>
+
+            <div id="menu_openned" style="height: 0px;">
+                    <p class="submenu">THE BUILDING</p>
+                    <p class="submenu">RESIDENCES</p>
+                    <p class="submenu">PENTHOUSES</p>
+                    <p class="submenu">AVAILABILITY</p>
+                    <p class="submenu">THE NEIGHBORHOOD</p>
+                    <p class="submenu">ABOUT</p>
+            </div>
+            </div>
+        </div>
+        <div id="panel_right">
+            <div id="carousel_image">
+                <img src="images/HOME_PAGE_HERO7.jpg">
+            </div>
+        </div>
+    </div>
+
+<script>
+    var flag = true;
+    function slide(){
+        if(flag == true){
+            document.getElementById("menu_openned").setAttribute("style","height:220px;");
+            flag = false;
+        }
+        else {
+            document.getElementById("menu_openned").removeAttribute("style");
+            flag = true;
+        }
+    }
+</script>
+</body>
+</html>
